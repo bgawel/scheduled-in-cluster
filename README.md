@@ -13,17 +13,17 @@ Disadvantages:
 
 Demo:
 
-1. Start H2 server by running
+1) Start H2 server by running
 ```
 java -Dspring.profiles.active=h2Server -jar scheduled-in-cluster-1.0-SNAPSHOT.jar
 ```
 
-2. Start node 1 in a cluster by running
+2) Start node 1 in a cluster by running
 ```
 java -Dserver.port=8083 -jar scheduled-in-cluster-1.0-SNAPSHOT.jar
 ```
 
-3. Start node 2 in the cluster by running
+3) Start node 2 in the cluster by running
 ```
 java -Dserver.port=8086 -Dscheduler.name=node2 -jar scheduled-in-cluster-1.0-SNAPSHOT.jar
 ```
@@ -31,7 +31,7 @@ java -Dserver.port=8086 -Dscheduler.name=node2 -jar scheduled-in-cluster-1.0-SNA
 **Expected:**
 Only node 1 executes jobs
 
-Stop node 1
+4) Stop node 1
 
 **Expected:**
 After ~90 seconds node 2 executes jobs
